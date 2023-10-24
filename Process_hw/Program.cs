@@ -12,8 +12,14 @@ namespace task_1
         static void Main(string[] args)
         {
             Process process = new Process();
-            process.StartInfo = new ProcessStartInfo("calc.exe");
+            process.StartInfo = new ProcessStartInfo("notepad.exe");
             process.Start();
+
+            Console.WriteLine("Запущен процесс: " + process.ProcessName);
+
+            process.WaitForExit();
+
+            Console.WriteLine("Процесс завершился с кодом: " +  process.ExitCode);
         }
     }
 }
