@@ -36,6 +36,7 @@ namespace task_4_app
             }
 
             Console.WriteLine(countWords);
+            Console.ReadLine();
         }
     }
 }
